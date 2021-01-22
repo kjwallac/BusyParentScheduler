@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Compressed CSS foundation framework-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+
+    <!-- Compressed JavaScript foundation framework-->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <title>Busy Parent Scheduler</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="media-object">
+            <div class="media-object-section">
+                <div class="thumbnail">
+                    <!--possibly need to find a new image and wont need any on clicks on this section / just a quick guide to how to use the app-->
+                    <img src="https://c.tadst.com/gfx/600x337/12month-calendar.png?1" alt="calendar image" width="275px" height="275px">
+                </div>
+            </div>
+            <div class="media-object-section">
+                <h2>Busy Parent Scheduler</h2>
+                <p>Never be late again and schedule your appointments with this app. You'll receive an alert when you're appointment is coming up and even when you're late for an appointment. Click on a day and begin scheduling your day!</p>
+            </div>
+        </div>
+    </header>
+    <div class="month">
+        <ul>
+            <!--need to make these on click functions to cycle through the months-->
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <!--need styling to create the box frames for the weekdays and the numbers-->
+            <li>January<br><span style="font-size:18px">2021</span></li>
+        </ul>
+    </div>
+
+    <!--can call the UL classes on the script file-->
+    <ul class="wWeekdays">
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+        <li>Sunday</li>
+    </ul>
+
+    <ul class="days">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+    </ul>
 </body>
+
 </html>
