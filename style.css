@@ -1,0 +1,163 @@
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds*/
+
+body {
+    background-image: url(https://mdn.mozillademos.org/files/11307/bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom right, left, right;
+    width: 100%;
+    min-width: 1000px;
+    height: auto;
+}
+
+.media-object {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-left: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.month {
+    margin-top: -16px;
+    padding: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.prev {
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+    float: left;
+    padding-top: 10px;
+    font-size: 60px;
+}
+
+.prev:hover {
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+}
+
+.prev:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.next {
+    padding: 10px 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+    float: right;
+    padding-top: 10px;
+    font-size: 60px;
+}
+
+.next:hover {
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+}
+
+.next:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12.6%;
+    text-align: center;
+    margin-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+    font-family: monospace;
+}
+
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.button {
+    font-family: monospace;
+    border-radius: 4px;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 220px;
+    height: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 25px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 20px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
