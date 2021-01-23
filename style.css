@@ -39,12 +39,12 @@ ul {
     font-size: 85px;
 }
 
-.wWeekdays {
+.weekdays {
     margin: 0;
     padding: 10px 0;
 }
 
-.wWeekdays li {
+.weekdays li {
     display: inline-block;
     width: 13.2%;
     text-align: center;
