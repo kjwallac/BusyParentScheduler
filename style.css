@@ -36,16 +36,57 @@ ul {
     text-transform: uppercase;
 }
 
-.month .prev {
+.prev {
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
     float: left;
     padding-top: 10px;
-    font-size: 75px;
+    font-size: 60px;
 }
 
-.month .next {
+.prev:hover {
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+}
+
+.prev:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.next {
+    padding: 10px 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
     float: right;
     padding-top: 10px;
-    font-size: 85px;
+    font-size: 60px;
+}
+
+.next:hover {
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+}
+
+.next:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
 }
 
 .weekdays {
