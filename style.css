@@ -96,11 +96,15 @@ ul {
 
 .weekdays li {
     display: inline-block;
-    width: 13.2%;
+    width: 12.6%;
     text-align: center;
-    margin-right: 15px;
-    font-size: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    margin-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    background: rgb(5, 0, 36);
+    background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
+    font-family: monospace;
 }
 
 .days {
