@@ -107,23 +107,57 @@ ul {
     font-family: monospace;
 }
 
-.days {
-    margin: 0;
-    padding: 20px 0;
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 12px;
 }
 
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13%;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    font-size: 12px;
-    padding-top: 37px;
-    padding-bottom: 30px;
+.button {
+    font-family: monospace;
+    border-radius: 4px;
     background: rgb(5, 0, 36);
     background: linear-gradient(324deg, rgba(5, 0, 36, 0) 23%, rgba(96, 149, 237, 1) 94%);
-    color: white;
-    font-size: 30px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 220px;
+    height: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 25px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 20px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
