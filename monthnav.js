@@ -53,7 +53,7 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDay; i++) {
-    days += `<button class='button'>${i}</button>`;
+    days += `<button class='button current'>${i}</button>`;
     monthDays.innerHTML = days;
   }
 
@@ -61,6 +61,7 @@ const renderCalendar = () => {
     days += `<button class ='button next-date'>${j}</button>`;
     monthDays.innerHTML = days;
   }
+  buttonListener();
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -72,5 +73,20 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
+
+
+function buttonListener(){
+  // You can only TODO list of the current month
+  var buttonList = document.getElementsByClassName("current");
+  
+  var month = document.getElementById("monthName").innerHTML;
+  var year = document.getElementById("year").innerHTML;
+
+  for (var i = 0; i < buttonList.length; i++){
+    buttonList[i].addEventListener('click', function(){
+      var date = month + "-" + $(this).text() + "-" + year;
+      window.document.location = "./todolist.html" + "?date=" + date;
+    })}
+ }
 
 renderCalendar();
