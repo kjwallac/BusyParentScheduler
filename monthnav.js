@@ -1,5 +1,6 @@
 const date = new Date();
 
+//function to render the calendar
 const renderCalendar = () => {
   date.setDate(1);
 
@@ -11,6 +12,7 @@ const renderCalendar = () => {
     0
   ).getDate();
 
+  
   const prevLastDay = new Date(
     date.getFullYear(),
     date.getMonth(),
@@ -56,7 +58,7 @@ const renderCalendar = () => {
   }
 
   for (let j = 1; j <= nextDays; j++) {
-    days += `<button class ='button next date'>${j}</button>`;
+    days += `<button class ='button next-date'>${j}</button>`;
     monthDays.innerHTML = days;
   }
 };
@@ -72,14 +74,3 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 renderCalendar();
-
-// const startWeek = moment().startOf('month').week();
-// const endWeek = moment().endOf('month').week();
-
-// // let calendar = []
-// // for(var week = startWeek; week<endWeek;week++){
-// //   calendar.push({
-// //     week:week,
-// //     days:Array(7).fill(0).map((n, i) => moment().week(week).startOf('week').clone().add(n + i, 'day'))
-// //   })
-// // }
