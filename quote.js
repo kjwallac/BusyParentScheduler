@@ -1,7 +1,3 @@
-//add div and script to html file to render quote:
-// <div id="quoteEl"></div>
-// <script src="quote.js"></script>
-
 async function getQuote() {
   const URL = "https://favqs.com/api/quotes/?filter=parenting&type=tag";
   const response = await fetch(URL, {
@@ -14,7 +10,7 @@ async function getQuote() {
       const quoteJSON = await response.json();
       const index = Math.floor(quoteJSON.quotes.length * Math.random());
       const quote = quoteJSON.quotes[index];
-      return `${quote.body} - ${quote.author}`;
+      return `"${quote.body}" - ${quote.author}`;
   }
   return 'no quote';
 }
