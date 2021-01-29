@@ -4,7 +4,6 @@ const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
 const tempF = document.querySelector('.f');
 const desc = document.querySelector('.desc');
-const sunriseDOM = document.querySelector('.sunrise');
 
 window.addEventListener('load', () => {
     let long;
@@ -22,7 +21,6 @@ window.addEventListener('load', () => {
                     const { temp, feels_like } = data.main;
                     const place = data.name;
                     const { description, icon } = data.weather[0];
-                    const { sunrise } = data.sys;
 
                     const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
                     const fahrenheit = (temp * 9) / 5 + 32;
