@@ -4,34 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Compressed CSS foundation framework-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <!-- Compressed JavaScript foundation framework-->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Busy Parent Scheduler</title>
 </head>
 
 <body>
     <header>
-        <div class="media-object">
-            <div class="media-object-section">
-                <h2>Busy Parent Scheduler</h2>
-                <p>Never be late again and schedule your appointments with this app. You'll receive an alert when you're appointment is coming up and even when you're late for an appointment. Click on a day and begin scheduling your day!</p>
+        <class class="title">
+            <h3>Busy Parent Planner</h3>
+        </class>
+        <div class="fade-in">
+            <div class="container">
+                <img src="" alt="" srcset="" id="weather-icon">
+                <span id="location"></span> /
+                <span class="desc"></span>
+                <span class="weather">
+                    <span class="circle">/
+                    <span class="f">
+                </span>
             </div>
         </div>
     </header>
     <div class="month">
         <ul>
-            <!--need to make these on click functions to cycle through the months-->
             <button class="prev"><span>&#10094;</span></button>
             <button class="next"><span>&#10095;</span></button>
-            <!--need styling to create the box frames for the weekdays and the numbers-->
             <li><span id="monthName">January</span><span id="year">2021</span></li>
         </ul>
     </div>
 
-    <!--can call the UL classes on the script file-->
     <ul class="weekdays">
         <li>Sunday</li>
         <li>Monday</li>
@@ -40,12 +43,13 @@
         <li>Thursday</li>
         <li>Friday</li>
         <li>Saturday</li>
-
     </ul>
 
     <div id="dates" class="days"></div>
-
-    <script src="monthnav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="month.js"></script>
+    <script src="weather.js"></script>
 </body>
 
 </html>
