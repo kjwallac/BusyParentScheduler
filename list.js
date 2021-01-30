@@ -29,6 +29,7 @@ $(document).ready(function(){
       span.appendChild(txt);
       li.appendChild(span);
     }
+    hideTasks(); 
   }
 
   function hideTasks(){
