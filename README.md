@@ -22,6 +22,10 @@ Basic instructions for this app:
 
 ## Dev Process
 Clint: The languages I used for this project were HTML, CSS, and Javascript. I worked on the Calendar page mostly using HTML and CSS. The javascript I used was to work on the weather API to load the users current weather and location. I used geolocation (longitude/latitude) to do this. For the HTML i mostly worked on the header tag. The wireframe I ended up using for the app was "zurb foundation". I used zurb with the days of the week by creating a list. CSS was a different beast because I needed to figure out a way to style the JQuery calls. 
+### Calendar page
+Clint & Kristina
+Clint: working on the calendar page we used some html, a lot of javascript, and an even crazier amount of CSS. The many troubles that I kept running into was setting the @ medias to coincide when I would shrink the screen. For the weather to be displayed we used the [openweather](https://openweathermap.org/) API. Using Geolocation to determine the users longitude / latitude the user will have access to the weather of the city they are in.
+
 
 Kristina: Once the HTML skeleton was in place, I was able to manipulate the calendar days buttons through the DOM. Using moment, the days are all given a YYYY-MM-DD formatted unique dateKey. This dateKey is passed in to the todoList URL upon button click and allows the todoList to render only the tasks for the given dateKey. The quote API proved difficult to figure out until I used Postman. Postman helped especially in formatting the authorization string.
 
