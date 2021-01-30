@@ -12,7 +12,6 @@ const renderCalendar = () => {
     0
   ).getDate();
 
-  
   const prevLastDay = new Date(
     date.getFullYear(),
     date.getMonth(),
@@ -48,20 +47,65 @@ const renderCalendar = () => {
 
   let days = "";
 
+  const prevMonth = moment(date).subtract(1, "months");
+
   for (let x = firstDayIndex; x > 0; x--) {
-    days += `<button class='button prev-date'>${prevLastDay - x + 1}</button>`;
+    const prevDate = prevLastDay - x + 1;
+    prevMonth.date(prevDate);
+    const pdateKey = prevMonth.format("YYYY-MM-DD");
+    const ptaskJSON = localStorage.getItem(pdateKey);
+    let ptaskCount = 0;
+    if (ptaskJSON) {
+      ptaskCount = JSON.parse(ptaskJSON).length;
+    }
+    if (ptaskCount === 0) {
+      days += `<button data-date='${pdateKey}' class='button date-button prev-date'>${prevDate}</button>`;
+    } else {
+      days += `<button data-date='${pdateKey}' class='button date-button prev-date'>${prevDate}<span class="badge alert taskCount-badge">${ptaskCount}</span></button>`;
+    }
   }
 
+  const curMonth = moment(date);
   for (let i = 1; i <= lastDay; i++) {
-    days += `<button class='button current'>${i}</button>`;
-    monthDays.innerHTML = days;
+    curMonth.date(i);
+    const dateKey = curMonth.format("YYYY-MM-DD");
+    const taskJSON = localStorage.getItem(dateKey);
+    let taskCount = 0;
+    if (taskJSON) {
+      taskCount = JSON.parse(taskJSON).length;
+    }
+    if (taskCount === 0) {
+      days += `<button data-date='${dateKey}' class='button date-button'>${i}</button>`;
+    } else {
+      days += `<button data-date='${dateKey}' class='button date-button'>${i}<span class="badge alert taskCount-badge">${taskCount}</span></button>`;
+    }
   }
 
+  const nextMonth = moment(date).add(1, "months");
   for (let j = 1; j <= nextDays; j++) {
-    days += `<button class ='button next-date'>${j}</button>`;
-    monthDays.innerHTML = days;
+    nextMonth.date(j);
+    const ndateKey = nextMonth.format("YYYY-MM-DD");
+    const ntaskJSON = localStorage.getItem(ndateKey);
+    let ntaskCount = 0;
+    if (ntaskJSON) {
+      ntaskCount = JSON.parse(ntaskJSON).length;
+    }
+    if(ntaskCount === 0) {
+      days += `<button data-date='${ndateKey}' class ='button date-button next-date'>${j}</button>`;
+    } else {
+      days += `<button data-date='${ndateKey}' class ='button date-button next-date'>${j}<span class="badge alert taskCount-badge">${ntaskCount}</span></button>`;
+    }
   }
-  buttonListener();
+  monthDays.innerHTML = days;
+
+  for (const button of monthDays.children) {
+    button.onclick = (e) => {
+      location.href = `todolist.html?date=${e.target.getAttribute(
+        "data-date"
+      )}`;
+      www;
+    };
+  }
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -73,20 +117,5 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
-
-
-function buttonListener(){
-  // You can only TODO list of the current month
-  var buttonList = document.getElementsByClassName("current");
-  
-  var month = document.getElementById("monthName").innerHTML;
-  var year = document.getElementById("year").innerHTML;
-
-  for (var i = 0; i < buttonList.length; i++){
-    buttonList[i].addEventListener('click', function(){
-      var date = month + "-" + $(this).text() + "-" + year;
-      window.document.location = "./todolist.html" + "?date=" + date;
-    })}
- }
 
 renderCalendar();
