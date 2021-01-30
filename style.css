@@ -248,6 +248,13 @@ ul {
     opacity: 2;
 }
 
+.taskCount-badge {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
 @media only screen and (max-width:500px) {
     /* For mobile phones: */
     h3 {
