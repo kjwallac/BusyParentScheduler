@@ -6,7 +6,7 @@ Project 1 - Busy Parent Scheduler App
 ## Project Screen Shots
 ![Calendar Screenshot](calendar.png)
 
-![ToDo List Screenshot](todolist.png)
+![ToDo List Screenshot](todolistv2.png)
 
 ## User Story / Use Cases
 We built this app for the intention of parents who have a busy life style that they could schedule their work week, personal life, and childrens schedule all in one place. For families that like to plan in advance the app allows you to select days weeks away and still be able to put in a "to do" item. The user will also have updated weather depending on the location they are at when they open the calendar.
@@ -40,6 +40,12 @@ Ron & Eric
 
 
 Kristina: the quote API used is favqs. The displayed quote is randomized from a list of quotes with the "parenting" tag, keeping in theme with the app.
+
+## Resources
+[Openweather API](https://openweathermap.org/)
+[FavQs quote API](https://favqs.com/api)
+[Moment.js library](https://momentjs.com/)
+[Zurb Foundation framework](https://get.foundation/sites/docs/)
 
  ## Future Development
 Future updates for the app would be to give the user alerts for when a particular item on their to do list is coming up. As well as giving an alert to the user when they are past due that to do and that it wasnt marked off as completed. I would also like to update the screen for when the user is on their phones that they can either stay on the month screen or the screen can be selected to show day by day.
