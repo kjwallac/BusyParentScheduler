@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
                     const place = data.name;
                     const { description, icon } = data.weather[0];
 
-                    const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+                    const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
                     const fahrenheit = (temp * 9) / 5 + 32;
                     iconImg.src = iconUrl;
                     loc.textContent = `${place}`;
