@@ -285,8 +285,7 @@ ul {
     /* For mobile phones: */
     #monthName,
     #year {
-        font-size: 5px;
-        margin: -20px;
+        font-size: 10px;
     }
 }
 
