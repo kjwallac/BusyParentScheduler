@@ -38,6 +38,8 @@ Kristina: the calendar days are fully rendered through manipulating the DOM, and
 Ron & Eric
 Ron: Working on the to do list page finding different ways to implement the style with CSS and the foundation of the page with HTML. I did research on different to do list's online and gathered ideas on what would be suitable for our application. We wanted to make sure the user would be allowed to add new tasks, complete tasks and would be organized in an orderly fashion. User must submit a task in order for it to be added to the to do list. 
 
+Eric: The main task for javascript was to figure a way on how we can connect the two applications together. We did this by creating date specific URLs for each day according to the month/year. This prevented future problems where we could have had similar days for different months containing the same values. Within the todo list, we created click event listeners so that every time someone would input their task, the application would simply take that value and add it into the list. 
+We also needed to create a local storage so that the tasks would save whenever we refreshed/went back to the todo list. And lastly, we provided a back button so that users may easily navigate to the calendar.
 
 Kristina: the quote API used is favqs. The displayed quote is randomized from a list of quotes with the "parenting" tag, keeping in theme with the app.
 
