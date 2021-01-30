@@ -104,7 +104,7 @@ ul {
     font-size: 60px;
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-right: 220px;
+    padding-right: 20px;
 }
 
 #year {
@@ -344,8 +344,9 @@ ul {
 @media only screen and (max-width:1300px) {
     /* For portrati ipad: */
     .button {
-        margin-left: 33px;
-        width: 11.5%;
+        margin-left: 16.3px;
+        margin-right: 0.5px;
+        width: 12.8%;
     }
 }
 
@@ -483,8 +484,8 @@ ul {
 }
 
 @media only screen and (min-width:500px) {
-    /* For desktops: */
     .fade-in {
         font-size: 5px;
+        text-align: center;
     }
 }
