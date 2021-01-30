@@ -36,7 +36,7 @@ Kristina: the calendar days are fully rendered through manipulating the DOM, and
 
 ### Todo List page
 Ron & Eric
-
+Ron: Working on the to do list page finding different ways to implement the style with CSS and the foundation of the page with HTML. I did research on different to do list's online and gathered ideas on what would be suitable for our application. We wanted to make sure the user would be allowed to add new tasks, complete tasks and would be organized in an orderly fashion. User must submit a task in order for it to be added to the to do list. 
 
 
 Kristina: the quote API used is favqs. The displayed quote is randomized from a list of quotes with the "parenting" tag, keeping in theme with the app.
